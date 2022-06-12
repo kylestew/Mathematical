@@ -16,7 +16,7 @@ extension Math {
 
      - Returns: There are num equally spaced samples in the closed interval [start, stop] or the half-open interval [start, stop) (depending on whether endpoint is True or False).
      */
-    static func linspace(start: Double, end: Double, num: Int = 50, endpoint: Bool = true) -> [Double] {
+    public static func linspace(start: Double, end: Double, num: Int = 50, endpoint: Bool = true) -> [Double] {
         let stride = (end - start) / Double(endpoint ? num - 1 : num)
         var pos = start
         var arr: [Double] = []
