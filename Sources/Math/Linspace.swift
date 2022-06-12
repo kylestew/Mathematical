@@ -1,8 +1,8 @@
 import Foundation
 
-struct Math {}
+public struct Math {}
 
-extension Math {
+public extension Math {
     /**
      Returns num evenly spaced samples, calculated over the interval [start, stop].
 
@@ -16,7 +16,7 @@ extension Math {
 
      - Returns: There are num equally spaced samples in the closed interval [start, stop] or the half-open interval [start, stop) (depending on whether endpoint is True or False).
      */
-    public static func linspace(start: Double, end: Double, num: Int = 50, endpoint: Bool = true) -> [Double] {
+    static func linspace(start: Double, end: Double, num: Int = 50, endpoint: Bool = true) -> [Double] {
         let stride = (end - start) / Double(endpoint ? num - 1 : num)
         var pos = start
         var arr: [Double] = []
